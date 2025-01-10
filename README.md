@@ -1,3 +1,3 @@
 # technova
-This is my repository
+This is my repository.
 Author - Anurag Pandey
