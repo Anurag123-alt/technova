@@ -1,47 +1,223 @@
+*{
+     margin: 0;
+     padding: 0;
+}
+
 body{
      width: 100%;
+     height: 100vh;
+     background: #c2d7a9;
+     display: grid;
+     grid-template-areas: "nav nav nav nav"
+     "main main main main"
+     "footer footer footer footer";
+     grid-template-columns: 1fr 2fr 4fr;
+     font-family: "Work Sans", serif;
+}
+.bar{
+     display: none;
+}
+.name{
+     width: 30vw;
+
      height: auto;
-     background: #000;
-
-     margin: 0;
-     padding: 10px;
-     border: 2px solid #fff;
-     box-sizing: border-box;
-     display: flex;
-     gap: 10px;
-justify-content: space-around;
-align-items: center;
-align-content: center;
-flex-wrap: wrap;
-font-family: "Work Sans", serif;
 }
 
-h2{
+.image{
      width: 100%;
-     height: 30px;
-
-     text-wrap: wrap;
-}
-p{
-     font-size:16px;
-     text-wrap: wrap;
-
+     height: 100%;
+     background: url("5326fb0eadc6b9de9de595ec3b5a8319.jpg");
+background-position:  center;
+background-size: cover;
+mix-blend-mode: multiply;
 }
 .box{
-     width: 204px;
-     height: auto;
-     background: #243231;
-
-     color: #fff;
-     display: flex;
      padding: 10px;
-     flex-direction: column;
-justify-content: flex-start;
-align-items: flex-start;
-align-content: center;
-flex-grow: 1;
-border-radius: 5px;
-border: 0.5px solid #fff;
+}
+#header{
+     grid-area: nav;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+
+}
+#navbar{
+     display: flex;
+
 
 }
 
+li{
+     list-style: none;
+     padding-top: clamp(1px,0.6vw,80px);
+     padding-bottom: clamp(1px,0.6vw,80px);
+     padding-left: clamp(1px,1.8vw,80px);
+     padding-right: clamp(1px,1.8vw,80px);
+
+
+
+     margin: 5px;
+     border-radius: 5px;
+}
+li:hover{
+     background:#fff;
+}
+#main{
+     grid-area: main;
+     padding: 40px;
+     display: flex;
+}
+
+#footer{
+     grid-area: footer;
+}
+
+
+.mainf{
+     width: 50%;
+     height: 500px;
+}
+
+.one{
+     width: 100%;
+     height: auto;
+     font-size: 40px;
+     padding: clamp(1px,0.5vw,30px);
+     color: #000;
+}
+
+.two{
+     width: 100%;
+     height: auto;
+     font-size: 40px;
+     color: #938f8f;
+     
+     padding: clamp(1px,0.5vw,30px);
+}
+
+
+.text{
+     margin-top: 10px;
+     font-size: 15px;
+     padding: clamp(1px,1vw,30px);
+     
+}
+
+input{
+     width:clamp(10px,100vw,200px);
+     height:clamp(25px,1vw,500px);
+margin-top: 10px;
+     border-radius: 8px;
+     border: 1px solid #aaa;
+     padding: clamp(1px,1vw,15px);
+
+}
+
+
+.btn{
+     width: 100px;
+     height: 20px;
+     padding: clamp(1px,1vw,15px);
+background:#7656;
+color: #925555;
+     margin: clamp(1px,1vw,30px);
+     margin-top: 25px;
+border-radius: 8px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.mains{
+     width: 50%;
+     height: 300px;
+}
+.foodimage{
+     width: 100%;
+     height: 500px;
+}
+img{
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     mix-blend-mode: multiply;
+}
+
+
+#footer{
+display: flex;
+flex-wrap: wrap;
+background: #000;
+color: #fff;
+}
+
+
+
+.fchild{
+     flex-grow: 1;
+     padding: 30px;
+
+     width: 300px;
+     height: 100px;
+}
+
+.f{
+     padding: 10px;
+     text-wrap: wrap;
+     border-radius: 5px;
+}
+.f:hover{
+     background: #455;
+}
+#about{
+     padding: 10px;
+}
+
+#atext{
+     padding: 10px;
+     
+}
+
+
+#iconpar{
+     width:200px ;
+     height: 60px;
+     background: red;
+     display: flex;
+}
+@media (min-width: 768px) {
+     .image{
+          width:40%;
+          height: 40px;
+
+     }
+   }
+   
+
+
+   @media only screen and (max-width:395px) {
+
+#header{
+     height: 30px;
+}
+.bar{
+     display: block;
+     margin-left: 200px;
+}
+}
+
+
+@media only screen and (max-width:499px) {
+li{
+     padding: 4px;
+}
+#header{
+justify-content: center;
+
+}
+
+
+
+}
+   
+   
