@@ -1,57 +1,329 @@
-body{
-     background-color: #c2d7a9;
-     text-align: center;
-     text-decoration: wavy;
-     font-weight: 500;
- }
- .div{
- display:flex;
- gap: 20px;
- color: #fff;
- flex-wrap: wrap;
- }
- .food{
-     flex-grow: 1;
-    width:250px; 
-    height: 130%;
- 
- }
- img{
-    border-radius: 30px;
-    box-shadow: 0px 0px 10px #000;
- 
- }
- #d1{
-     height: 400px;
-     font-size:xx-large; 
- }
- img{
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
- }
- #d2{
-     height: 400px;
-     font-size:xx-large; 
- }
- #d3{
-     height: 400px;
-     font-size:xx-large; 
- }
- #d4{
-     height: 400px;
-     font-size:xx-large; 
- }
- .Place{
-     text-align: center;
-     background-color:rgb(53, 7, 7); 
-     color: #fff;
-     height: 200px;
-     font-size: larger;
- }
- .address{
-     font-size:30px;
- }
- .box{
-     background-color: bisque;
- }
+:root {
+    --hover: #157933;
+    --card: #cfcaca;
+    --body: #999494;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: var(--body);
+    display: grid;
+    grid-template-areas: "nav nav nav nav"
+        "card card card card"
+        "footer footer footer footer";
+
+    font-family: "Work Sans", serif;
+}
+
+/* navbar section start */
+
+.navbar {
+
+    width: 100%;
+    height: clamp(60px, 1vw, 60px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: var(--card);
+    /* background: #5e5c5c; */
+
+    grid-area: nav;
+    z-index: 1;
+    border-bottom: 1.9px solid #000;
+}
+
+.first {
+    width: 28%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+
+.image {
+    width: 100%;
+    height: 100%;
+    background: url("5326fb0eadc6b9de9de595ec3b5a8319.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+}
+
+.bar {
+    display: none;
+}
+
+.second {
+    width: 75%;
+    display: flex;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    align-items: center;
+
+}
+
+.link {
+    height: 100%;
+    display: flex;
+
+    padding: clamp(2px, 10vw, 15px);
+
+}
+
+.cart {
+    background: var(--hover);
+
+    transition: 0.3s;
+
+    color: #fff;
+
+    padding-top: clamp(5px, 0.3vw, 5px);
+    padding-bottom: clamp(5px, 0.3vw, 5px);
+    padding-left: clamp(10px, 0.7vw, 10px);
+    padding-right: clamp(10px, 0.7vw, 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: clamp(12px, 2vw, 24px);
+
+}
+
+.cart:hover {
+    background: #000;
+
+    color: #fff;
+
+}
+
+.li {
+    padding-top: clamp(5px, 0.1vw, 5px);
+    padding-bottom: clamp(5px, 0.1vw, 5px);
+    padding-left: clamp(6px, 0.8vw, 6px);
+    padding-right: clamp(6px, 0.8vw, 6px);
+    border-radius: 5px;
+    margin-left: clamp(10px, 0.1vw, 100px);
+    list-style: none;
+    text-wrap: nowrap;
+    transition: 0.3s;
+
+}
+
+.li:hover {
+    background: #000;
+    color: #fff;
+    box-shadow: 0 0 0.4px #000;
+}
+
+/* navbar section end */
+
+
+/* main section start */
+main {
+    width: 100%;
+    height: auto;
+    grid-area: card;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 18px;
+    padding: 40px;
+}
+
+.food-card-box {
+    padding: clamp(10px, 1vw, 20px);
+    border-radius: 5px;
+    background: var(--card);
+    padding-bottom: 0;
+    transition: 0.4s;
+}
+
+.food-card-box:hover {
+    transform: scale(1.05);
+}
+
+.food-card-image {
+    width: 100%;
+    height: 40%;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1px;
+
+}
+
+.food-card-text {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.rate {
+    padding: clamp(10px, 1vw, 20px);
+    padding-bottom: clamp(5px, 1vw, 10px);
+}
+
+.star {
+    color: #04d404;
+}
+
+p.price {
+    padding-left: clamp(10px, 1vw, 20px);
+    font-size: 14px;
+}
+
+h4 {
+    padding-top: clamp(10px, 1vw, 20px);
+    padding-left: clamp(10px, 1vw, 20px);
+}
+
+
+p.desc {
+    padding: clamp(10px, 1vw, 20px);
+
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    padding: 5px;
+
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: clamp(8px, 1vw, 10px);
+    background: #aaa;
+    border-radius: 2px;
+    text-wrap: nowrap;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* main section end */
+
+
+
+/* footer section start */
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(30px, 1vw, 425px);
+    padding-bottom: 0px;
+    background: #111;
+    color: #fff;
+}
+
+.main-div {
+    width: 100%;
+    height: auto;
+    padding: clamp(10px, 1vw, 225px);
+    border-bottom: 1px solid #fff;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inner-div {
+    flex-grow: 1;
+    padding: 10px;
+}
+
+
+.sub-div {
+    text-wrap: wrap;
+    padding: 12px;
+    display: flex;
+    justify-content: flex-start;
+    color: #aaa;
+    transition: 0.3s;
+
+}
+
+.sub-div:hover {
+    color: #4566ff;
+    text-decoration: underline;
+}
+
+.icon {
+    width: 31px;
+}
+
+.menu {
+    font-weight: bold;
+    color: #fff;
+}
+
+.menu:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.copyright {
+    padding: clamp(15px, 1vw, 80px);
+}
+
+/* footer section end */
+
+
+
+
+@media only screen and (max-width:499px) {
+
+
+    .li {
+        padding: 3px;
+        margin: 3px;
+    }
+
+}
+
+
+@media only screen and (min-width:640px) {
+    .navbar {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .image {
+        background-size: 200px;
+
+        background-position: left;
+    }
+
+
+}

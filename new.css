@@ -1,0 +1,30 @@
+footer{
+     grid-area: footer;
+     display: flex;
+     padding: clamp(50px,1vw,525px);
+     
+     background: blue;
+}
+
+.main-div{
+width: 100%;
+height: auto;
+padding: clamp(50px,1vw,525px);
+
+
+background: red;
+display: flex;
+flex-wrap: wrap;
+}
+.inner-div{
+     width: 200px;
+     height: ;
+     background: green;
+flex-grow: 1;
+padding: 20px;
+}
+
+
+.sub-div{
+     width: ;
+}

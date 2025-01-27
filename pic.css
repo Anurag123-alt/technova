@@ -1,0 +1,66 @@
+.main-innersec {
+     width: 100%;
+     max-width: 100vw;
+     height: 200px;
+     background: red;
+     padding: 5px;
+     overflow-x: scroll;
+     scrollbar-width: none;
+     display: flex;
+     overflow-x: auto; /* Ensure scroll works */
+     white-space: nowrap; /* Prevent child elements from wrapping */
+}
+
+/* .first-div {
+     width: 200px;
+
+     height: 200px;
+     box-sizing: border-box;
+
+     display: flex;
+     overflow-x: scroll;
+     scrollbar-width: none;
+
+} */
+
+
+
+
+
+
+.first-inner {
+     min-width: 200px;
+     height: auto;
+     /* background: #a2ad43; */
+     background: #469c60;
+     margin: 10px;
+     border-radius: 17px;
+     border-bottom-left-radius: 0px;
+     border-bottom-right-radius: 0px;
+     display: flex;
+     flex-direction: column;
+}
+
+.card-image {
+     width: 100%;
+     height: 140px;
+     transform: translateY(-10px);
+     border-radius: 50px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.cimage {
+     width: 100%;
+     height: 100%;
+}
+
+.card-name {
+     padding-left: 10px;
+     padding-right: 10px;
+     transform: translateY(-20px);
+     text-wrap: nowrap;
+     display: flex;
+     justify-content: center;
+}
